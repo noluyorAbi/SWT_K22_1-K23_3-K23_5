@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kapitel_22_1-Kapitel_23_3-23_5.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/*
+
+Night Owl for highlight.js (c) Carl Baxter <carl@cbax.tech>
+
+An adaptation of Sarah Drasner's Night Owl VS Code Theme 
+https://github.com/sdras/night-owl-vscode-theme 
+
+Copyright (c) 2018 Sarah Drasner
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #011627;
+  color: #d6deeb;
+}
+
+/* General Purpose */
+.hljs-keyword {
+  color: #c792ea;
+  font-style: italic;
+}
+.hljs-built_in {
+  color: #addb67;
+  font-style: italic;
+}
+.hljs-type {
+  color: #82aaff;
+}
+.hljs-literal {
+  color: #ff5874;
+}
+.hljs-number {
+  color: #F78C6C;
+}
+.hljs-regexp {
+  color: #5ca7e4;
+}
+.hljs-string {
+  color: #ecc48d;
+}
+.hljs-subst {
+  color: #d3423e;
+}
+.hljs-symbol {
+  color: #82aaff;
+}
+.hljs-class {
+  color: #ffcb8b;
+}
+.hljs-function {
+  color: #82AAFF;
+}
+.hljs-title {
+  color: #DCDCAA;
+  font-style: italic;
+}
+.hljs-params {
+  color: #7fdbca;
+}
+
+/* Meta */
+.hljs-comment {
+  color: #637777;
+  font-style: italic;
+}
+.hljs-doctag {
+  color: #7fdbca;
+}
+.hljs-meta {
+  color: #82aaff;
+}
+.hljs-meta-keyword {
+  color: #82aaff;
+}
+.hljs-meta-string {
+  color: #ecc48d;
+}
+
+/* Tags, attributes, config */
+.hljs-section {
+  color: #82b1ff;
+}
+.hljs-tag,
+.hljs-name,
+.hljs-builtin-name {
+  color: #7fdbca;
+}
+.hljs-attr {
+  color: #7fdbca;
+}
+.hljs-attribute {
+  color: #80cbc4;
+}
+.hljs-variable {
+  color: #addb67;
+}
+
+/* Markup */
+.hljs-bullet {
+  color: #d9f5dd;
+}
+.hljs-code {
+  color: #80CBC4;
+}
+.hljs-emphasis {
+  color: #c792ea;
+  font-style: italic;
+}
+.hljs-strong {
+  color: #addb67;
+  font-weight: bold;
+}
+.hljs-formula {
+  color: #c792ea;
+}
+.hljs-link {
+  color: #ff869a;
+}
+.hljs-quote {
+  color: #697098;
+  font-style: italic;
+}
+
+/* CSS */
+.hljs-selector-tag {
+  color: #ff6363;
+}
+
+.hljs-selector-id {
+  color: #fad430;
+}
+
+.hljs-selector-class {
+  color: #addb67;
+  font-style: italic;
+}
+
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #c792ea;
+  font-style: italic;
+}
+
+/* Templates */
+.hljs-template-tag {
+  color: #c792ea;
+}
+.hljs-template-variable {
+  color: #addb67;
+}
+
+/* diff */
+.hljs-addition {
+  color: #addb67ff;
+  font-style: italic;
+}
+
+.hljs-deletion {
+  color: #EF535090;
+  font-style: italic;
+}
+
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<span style="font-family: New Century Schoolbook; font-size:17px"  >
+<h1 id="u-kapitel-zusammenfassung-%C3%BCb-5--18112023-u"><u> Kapitel Zusammenfassung ÜB 5 || 18.11.2023 </u></h1>
+<h2 id="ukapitel-221-kapitel-233-kapitel-235-u"><u>Kapitel 22.1-Kapitel 23.3-Kapitel 23.5 </u></h2>
+<h2 id="ukapitel-22-vorblick-u"><u>Kapitel 22 Vorblick </u></h2>
+<ul>
+<li><code>Ziel:</code> Überblick über das Management von Softwareprojekten &amp; über zwei wichtige Mangagementaktivitäten (Risiko- und Personalmanagement)</li>
+<li><code>Kenntnisse nach dem Lesen:</code>
+<ul>
+<li>Hauptaufgaben eines Softwareprojektmanagers kennen</li>
+<li>Verständnis von Risikomanagement und Kenntnis der Risiken in Softwareprojekten.</li>
+<li>Verständnis der Faktoren, die die Personalmotivation beeinflussen, für Softwareprojektmanager.</li>
+<li>Kenntnis der Schlüsselfaktoren für Teamarbeit, einschließlich Teamzusammensetzung, -organisation und -kommunikation.</li>
+</ul>
+</li>
+<li><code>Kriterien für erfolgreiches Projektmanagement:</code>
+<ul>
+<li>Software fristgerecht an den Kunden auszuliefern</li>
+<li>Gesamtkosten im vorgegebenen Rahmen zu halten</li>
+<li>Software die den Erwartungen des Kunden entspricht</li>
+<li>Zufriedenes und gut funktionierendes Entwicklerteam aufzubauen</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="ukapitel-221-risikomanagement-u"><u>Kapitel 22.1 Risikomanagement </u></h2>
+<p><em>Projektmanager müssen Risiken voraussehen und Maßnahmen zur Vermeidung von Auswirkungen auf Zeitplan und
+Softwarequalität ergreifen.</em></p>
+<ul>
+<li>
+<p><strong><code>Arten des Risikos:</code></strong></p>
+<ul>
+<li>
+<p><code>Projektrisiken:</code></p>
+<ul>
+<li>Wirken sich auf Projektzeitplan oder die Ressourcen aus</li>
+<li><em>Beispiel:</em> Verlust eines erfahrenen Systemarchitekts → Diesen zu ersetzen kann lange dauern und somit die Entwicklung über den geplanten Zeitlauf verzögern</li>
+</ul>
+</li>
+<li>
+<p><code>Produktrisiken:</code></p>
+<ul>
+<li>Wirken sich auf die Qualität oder die Leistung der entwickelten Software aus</li>
+<li><em>Beispiel:</em> käuflich erworbene Komponente, die nicht die erwartete Leistung bringt → kann die Gesamtleistung des systems beeinträchtigen</li>
+</ul>
+</li>
+<li>
+<p><code>Geschäftsrisiken:</code></p>
+<ul>
+<li>Risiken welches das Unternehmen trägt die das Projekt entwickelt</li>
+<li><em>Beispiel:</em> die Einführung eines Konkurrenzprodukts durch einen Mitbewerber, die die Verkaufsprognosen bestehender Softwareprodukte beeinflussen kann.</li>
+</ul>
+</li>
+<li>
+<p><code>Risikokategorien können sich überschneiden</code></p>
+<ul>
+<li>Der Verlust eines erfahrenen Programmierers kann ein <strong><em>Projektrisiko (Zeitplanverzögerung)</em></strong>, ein <strong><em>Produktrisiko (Programmierfehler durch weniger Erfahrung)</em></strong> und ein <strong><em>Geschäftsrisiko (Ruf und Erfahrung beeinflussen die Auftragsakquisition)</em></strong> darstellen. Bei großen Projekten sollten Risikoanalysenergebnisse und Folgenabschätzungen in einem Risikoregister festgehalten werden.
+ </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><u>Einige universelle Risiken:</u></p>
+<table>
+<thead>
+<tr>
+<th>Risiko</th>
+<th>Art des Risikos</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Personalveränderung</td>
+<td>Projekt</td>
+<td>Erfahrenes Personal verlässt das Projekt vor seiner Fertigstellung.</td>
+</tr>
+<tr>
+<td>Managementwechsel</td>
+<td>Projekt</td>
+<td>Es gibt einen Wechsel zu einem neuen Management, das neue Prioritäten setzt.</td>
+</tr>
+<tr>
+<td>Nichtverfügbarkeit von Hardware</td>
+<td>Projekt</td>
+<td>Für das Projekt unverzichtbare Hardware wird nicht pünktlich geliefert.</td>
+</tr>
+<tr>
+<td>Veränderung der Anforderungen</td>
+<td>Projekt und Produkt</td>
+<td>Die Anzahl der Änderungen bei den Anforderungen ist größer als erwartet.</td>
+</tr>
+<tr>
+<td>Verzögerungen in der Spezifikation</td>
+<td>Projekt und Produkt</td>
+<td>Die Spezifikationen wichtiger Schnittstellen sind nicht pünktlich verfügbar.</td>
+</tr>
+<tr>
+<td>Unterschätzen des Umfangs</td>
+<td>Projekt und Produkt</td>
+<td>Der Umfang des Projekts wurde unterschätzt.</td>
+</tr>
+<tr>
+<td>Unzureichende Leistung der Softwarewerkzeuge</td>
+<td>Produkt</td>
+<td>Softwarewerkzeuge, die das Projekt unterstützen, bringen nicht die erwartete Leistung.</td>
+</tr>
+<tr>
+<td>Technologieveränderung</td>
+<td>Geschäft</td>
+<td>Die dem System zugrunde liegende Technologie wird durch eine neue Technologie verdrängt.</td>
+</tr>
+<tr>
+<td>Produktkonkurrenz</td>
+<td>Geschäft</td>
+<td>Ein Konkurrenzprodukt wird auf den Markt gebracht, bevor das System fertiggestellt ist.</td>
+</tr>
+</tbody>
+</table>
+<p>Abbildung 22.1: Beispiele für häufige Projekt-, Produkt- und Geschäftsrisiken.
+ 
+ </p>
+<ul>
+<li><strong><code>Ablauf des Risikomanagements:</code></strong>
+<ul>
+<li><code>Risikoerkennung: Liste potenzieller Risiken</code> identifizierung möglicher Projekt-, Produkt- und Geschäftsrisiken.</li>
+<li><code>Risikoanalyse: Priorisierte Liste der Risiken </code> Beurteilung der Eintrittswahrscheinlichkeit und Folgen dieser Risiken</li>
+<li><code>Risikoplanung: Risikovermeidung und Notfallpläne </code> Erstellen von Plänen, die Maßnahme zur Vermeidung und Verringerung der Auswirkungen definieren</li>
+<li><code>Risikoüberwachung: Risikobewertung</code> Regelmäßiges Bewerten der Risiken und Plände der Risikominimierung und deren Überarbeitung, sobald mehr Informationen über ein Risiko verfügbar sind<br>
+ 
+→ Nach <code>Risikoüberwachung</code> Loopback zu <code>Risikoanalyse</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="ukapitel-2211-risikoerkennung-u"><u>Kapitel 22.1.1 Risikoerkennung </u></h2>
+<p><em>Risikoerkennung ist der erste Schritt des Risikomanagements und umfasst das Identifizieren der Risiken,
+die eine Gefahr für den Softwareentwicklungsprozess,
+die zu entwickelnde Software oder das Entwicklungsunternehmen darstellen können.</em></p>
+<ul>
+<li><strong><code>Checkliste sechs verschiedener Risikoarten:</code></strong>
+<ul>
+<li><code>Technologische Risiken:</code> Risiken die sich aus dem Hard- oder Softwaretechnologien ergeben, die im entwickelten System Verwendung finden</li>
+<li><code>Personalbezogene Risiken:</code> Risiken, die mit Personen aus Entwicklerteam zusammenhängen</li>
+<li><code>Unternehmensbezogene Risiken:</code> Risiken aus dem Unternehmensumfeld</li>
+<li><code>Risiken durch Werkzeuge:</code> Risiken, die sich aus den verwendeten Softwarewerkzeugen und Hilfssoftware bei der Systementwicklung ergeben.</li>
+<li><code>Anforderungsrisiken:</code> Risiken, die auf geänderte Kundenanforderungen und den Umgang mit diesen Änderungen zurückzuführen sind.</li>
+<li><code>Schätzrisiken:</code> Risiken, die sich aus den Management-Schätzungen der für die Systemerstellung benötigten Ressourcen ergeben.</li>
+</ul>
+</li>
+</ul>
+<p> 
+Einige Beispiele möglicher Risiken aus jeder dieser Kategorien:</p>
+<table>
+<thead>
+<tr>
+<th>Art des Risikos</th>
+<th>Mögliche Risiken</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Technologisch</td>
+<td>1. Die im System verwendete Datenbank kann nicht so viele Transaktionen pro Sekunde durchführen wie erwartet.<br>2. Fehler in wiederverwendbaren Softwarekomponenten müssen vor ihrer Wiederverwendung behoben werden.</td>
+</tr>
+<tr>
+<td>Personenbezogen</td>
+<td>3. Es ist unmöglich, genügend Personal mit den benötigten Fähigkeiten zu rekrutieren.<br>4. Wichtige Mitarbeiter sind krank oder zu kritischen Zeitpunkten nicht verfügbar.<br>5. Es gibt keine Möglichkeit, erforderliche Schulungen durchzuführen.</td>
+</tr>
+<tr>
+<td>Unternehmensbezogen</td>
+<td>6. Das Unternehmen wird umstrukturiert, sodass ein anderes Management für das Projekt verantwortlich ist.<br>7. Finanzielle Probleme des Unternehmens zwingen zu Kürzungen des Projektbudgets.</td>
+</tr>
+<tr>
+<td>Werkzeuge</td>
+<td>8. Der durch entsprechende Softwarewerkzeuge generierte Code ist ineffizient.<br>9. Softwarewerkzeuge arbeiten nicht wie erwartet durchgängig zusammen.</td>
+</tr>
+<tr>
+<td>Anforderungen</td>
+<td>10. Es werden Änderungen der Anforderungen vorgeschlagen, die eine beträchtliche Nachbearbeitung des Entwurfs nach sich ziehen.<br>11. Kunden verstehen die Auswirkungen von Anforderungsänderungen nicht.</td>
+</tr>
+<tr>
+<td>Schätzung</td>
+<td>12. Die zur Entwicklung der Software benötigte Zeit wird unterschätzt.<br>13. Die Anzahl der Fehlerbehebungen wird unterschätzt.<br>14. Der Umfang der Software wird unterschätzt.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="ukapitel-2212-risikoanalyse-u"><u>Kapitel 22.1.2 Risikoanalyse </u></h2>
+<p><em>Während der Risikoanalyse werden alle erkannten Risiken der Reihe nach betrachtet
+und hinsichtlich ihrer Eintrittswahrscheinlichkeit und Konsequenzen beurteilt.
+ 
+Es gibt hierzu keinen einfachen Weg – Sie müssen auf Ihr eigenes Urteilsvermögen und auf
+Ihre Erfahrungen mit Problemen in früheren Projekten vertrauen.
+ 
+Es ist nicht möglich, die Wahrscheinlichkeit und das Ausmaß des Risikos präzise und in konkreten Zahlen
+vorherzusagen. Stattdessen sollten Sie das Risiko einem Wertebereich zuweisen:</em></p>
+<ul>
+<li><code>Wahrscheinlichkeit des Risikos: </code>
+<ul>
+<li>sehr gering</li>
+<li>niedrig</li>
+<li>mittel</li>
+<li>hoch</li>
+<li>sehr hoch</li>
+</ul>
+</li>
+<li><code>Auswirkung des Risikos:</code>
+<ul>
+<li>katastrophal (bedroht den Fortbestanddes Projekts)</li>
+<li>kritisch (würde zu wesentlicher Verzögerung führen)</li>
+<li>geringfügig (Verzögerungen sind innerhalb der erlaubten Möglichkeiten)</li>
+<li>unwesentlich</li>
+</ul>
+</li>
+</ul>
+<p>Resultate sollten nach Analyseprozess tabellarisch in der Reihenfolge der Auswirkungen angeordnet werden:</p>
+<table>
+<thead>
+<tr>
+<th>Risiko</th>
+<th>Wahrscheinlichkeit</th>
+<th>Auswirkungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Finanzielle Probleme des Unternehmens zwingen zu Kürzungen des Projektbudgets. (7)</td>
+<td>Niedrig</td>
+<td>Katastrophal</td>
+</tr>
+<tr>
+<td>Es ist unmöglich, genügend Personal mit den benötigten Fähigkeiten zu rekrutieren. (3)</td>
+<td>Hoch</td>
+<td>Katastrophal</td>
+</tr>
+<tr>
+<td>Wichtige Mitarbeiter sind krank oder zu kritischen Zeitpunkten nicht verfügbar. (4)</td>
+<td>Mittel</td>
+<td>Kritisch</td>
+</tr>
+<tr>
+<td>Zur Wiederverwendung vorgesehene Softwarekomponenten enthalten Fehler, die ihre Funktionalität einschränken. (2)</td>
+<td>Mittel</td>
+<td>Kritisch</td>
+</tr>
+<tr>
+<td>Es werden Änderungen der Anforderungen vorgeschlagen, die eine beträchtliche Nachbearbeitung des Entwurfs nach sich ziehen. (10)</td>
+<td>Mittel</td>
+<td>Kritisch</td>
+</tr>
+<tr>
+<td>Das Unternehmen wird umstrukturiert, sodass ein anderes Management für das Projekt verantwortlich ist. (6)</td>
+<td>Hoch</td>
+<td>Kritisch</td>
+</tr>
+<tr>
+<td>Die im System verwendete Datenbank kann nicht so viele Transaktionen pro Sekunde durchführen wie erwartet. (1)</td>
+<td>Mittel</td>
+<td>Kritisch</td>
+</tr>
+<tr>
+<td>Die zur Entwicklung der Software benötigte Zeit wird unterschätzt. (12)</td>
+<td>Hoch</td>
+<td>Kritisch</td>
+</tr>
+<tr>
+<td>Softwarewerkzeuge arbeiten nicht wie erwartet durchgängig zusammen. (9)</td>
+<td>Hoch</td>
+<td>Geringfügig</td>
+</tr>
+<tr>
+<td>Kunden verstehen die Auswirkungen von Anforderungsänderungen nicht. (11)</td>
+<td>Mittel</td>
+<td>Geringfügig</td>
+</tr>
+<tr>
+<td>Es gibt keine Möglichkeit, erforderliche Schulungen durchzuführen. (5)</td>
+<td>Mittel</td>
+<td>Geringfügig</td>
+</tr>
+<tr>
+<td>Die Anzahl der Fehlerbehebungen wird unterschätzt. (13)</td>
+<td>Mittel</td>
+<td>Geringfügig</td>
+</tr>
+<tr>
+<td>Der Umfang der Software wird unterschätzt. (14)</td>
+<td>Hoch</td>
+<td>Geringfügig</td>
+</tr>
+<tr>
+<td>Der durch entsprechende Softwarewerkzeuge generierte Code ist ineffizient. (8)</td>
+<td>Mittel</td>
+<td>Unwesentlich</td>
+</tr>
+</tbody>
+</table>
+<p>Abbildung 22.4: Risikoarten und Beispiele.</p>
+<ul>
+<li>Tabelle bei jedem Durchlauf durch den Risikomanagementprozess auf den neuesten Stand bringen.</li>
+<li>Entscheidung über die wichtigsten Risiken basierend auf der Kombination von Eintrittswahrscheinlichkeit und Auswirkungen.</li>
+<li>Eintrittswahrscheinlichkeit und Auswirkungen von Risiken können sich ändern, wenn mehr Informationen verfügbar sind und Risikomanagementpläne umgesetzt werden.</li>
+<li>Im Allgemeinen zählen alle katastrophalen Risiken und alle kritischen Risiken mit überdurchschnittlicher Eintrittswahrscheinlichkeit zu den wichtigsten Risiken.</li>
+<li>Boehm (1988) schlägt vor, die zehn wichtigsten Risiken zu identifizieren und zu überwachen, aber die genaue Anzahl kann projektspezifisch sein und zwischen fünf und fünfzehn liegen.</li>
+<li>Die Anzahl der zur Überwachung ausgewählten Risiken sollte sich an der Praxis orientieren.</li>
+<li>Es wird empfohlen, alle Risiken zu beachten, die katastrophale oder kritische Konsequenzen haben.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Risiko</th>
+<th>Strategie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Finanzielle Probleme des Unternehmens</code></td>
+<td>Erstellen Sie eine Zusammenfassung für das höhere Management, in der Sie aufzeigen, welch wichtigen Beitrag das Projekt zum Erreichen der Ziele des Unternehmens leistet und warum Kürzungen des Projektbudgets nicht unbedingt kosteneffizient sind.</td>
+</tr>
+<tr>
+<td><code>Rekrutierungsprobleme</code></td>
+<td>Alarmieren Sie den Kunden bei potenziellen Schwierigkeiten und der Möglichkeit von Verzögerungen. Überprüfen Sie den Zukauf von Komponenten.</td>
+</tr>
+<tr>
+<td><code>Krankheit des Personals</code></td>
+<td>Reorganisieren Sie das Team so, dass es mehr Überschneidungen bei den Arbeiten gibt, damit die Mitarbeiter die Aufgabe der anderen besser verstehen.</td>
+</tr>
+<tr>
+<td><code>Fehlerhafte Komponenten</code></td>
+<td>Ersetzen Sie potenziell fehlerhafte Komponenten durch neue Komponenten, die als zuverlässig bekannt sind.</td>
+</tr>
+<tr>
+<td><code>Änderungen der Anforderungen</code></td>
+<td>Leiten Sie Information zur Rückverfolgbarkeit ab, um die Auswirkungen von Anforderungsänderungen zu beurteilen. Trennen Sie beim Entwurf die Daten so weit wie möglich von der Implementierung.</td>
+</tr>
+<tr>
+<td><code>Umstrukturierung des Unternehmens</code></td>
+<td>Erstellen Sie eine Zusammenfassung an das höhere Management, in der Sie aufzeigen, welch wichtigen Beitrag das Projekt zum Erreichen der Ziele des Unternehmens leistet.</td>
+</tr>
+<tr>
+<td><code>Datenbankleistung</code></td>
+<td>Untersuchen Sie die Möglichkeit des Erwerbs einer Datenbank mit höherer Leistung.</td>
+</tr>
+<tr>
+<td><code>Unterschätzte Entwicklungszeit</code></td>
+<td>Untersuchen Sie, ob es sich lohnt, Komponenten zuzukaufen oder automatisch Code zu erzeugen.</td>
+</tr>
+</tbody>
+</table>
+<p>Abbildung 22.5: Strategien zum Risikomanagement.</p>
+<hr>
+<h2 id="ukapitel-2213-risikoplanung-u"><u>Kapitel 22.1.3 Risikoplanung </u></h2>
+<p><em>Die Risikoplanung entwickelt Strategien zur Bewältigung der Hauptbedrohungen für das Projekt.
+ 
+Für jedes Risiko werden Maßnahmen überlegt, um die Auswirkungen auf das Projekt zu minimieren.
+Es wird auch berücksichtigt, welche Daten zur Überwachung des Projekts erfasst werden müssen,
+um aufkommende Probleme frühzeitig zu erkennen.
+ 
+In der Risikoplanung werden &quot;Was-wenn&quot;-Fragen gestellt,
+die sowohl einzelne Risiken als auch Risikokombinationen und externe Faktoren berücksichtigen,
+die Auswirkungen auf diese Risiken haben könnten.</em></p>
+<p><strong><code>Beispielfragen:</code></strong></p>
+<ul>
+<li>Was, wenn mehrere Entwickler gleichzeitig krank werden?</li>
+<li>Was, wenn eine Konjunkturschwäche zu Budgetkürzungen von 20% für das Projekt führen</li>
+<li>Was, wenn die Leistung von Open-Source-Software nicht stimmt und der einzige
+Experte für die Open-Source-Software das Unternehmen verlässt?</li>
+<li>Was, wenn das Unternehmen, das Softwarekomponenten liefert und wartet, sein
+Geschäft aufgibt?</li>
+<li>Was, wenn der Kunde die überarbeiteten Anforderungen nicht wie angekündigt
+liefert?</li>
+</ul>
+<p>→ Die Antworten zu diesen Fragen liefern die <code>Risikomanagementsstrategien</code></p>
+<p><strong><code>Risikomanagementsstrategien:</code></strong></p>
+<ul>
+<li><code>Vermeidungsstrategien:</code> Strategien, die darauf abzielen, die Eintrittswahrscheinlichkeit des Risikos zu verringern, z.B. Umgang mit fehlerhaften Komponenten.</li>
+<li><code>Minimierungsstrategien:</code> Strategien, die darauf abzielen, die Auswirkungen des Risikos zu reduzieren, z.B. Strategie im Krankheitsfall des Personals.</li>
+<li><code>Notfallpläne:</code> Strategien, die sich auf den schlimmsten Fall vorbereiten und eine Strategie zur Problemlösung parat haben, z.B. Strategie bei finanziellen Problemen des Unternehmens.</li>
+</ul>
+<hr>
+<h2 id="ukapitel-2214-risiko%C3%BCberwachung-u"><u>Kapitel 22.1.4 Risikoüberwachung </u></h2>
+<p><em>Die Risikoüberwachung stellt sicher, dass die Risikoannahmen noch gültig sind.
+Die Risikoüberwachung beurteilt regelmäßig die Wahrscheinlichkeit und die Auswirkungen der Risiken und passt sie an.
+ 
+Die Risikoüberwachung berücksichtigt andere Faktoren, die die Risiken beeinflussen können,
+wie z.B. die Anzahl der Anforderungsänderungen &amp; hängt von der Art des Risikos ab</em></p>
+<p><strong>Einige Beispiele von Faktoren, die bei der Beurteilung dieser Risikoarten hilfreich sein können:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Art des Risikos</th>
+<th>Mögliche Indikatoren</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Technologisch</code></td>
+<td>Verspätete Lieferung von Hardware oder Hilfssoftware; viele gemeldete technische Probleme</td>
+</tr>
+<tr>
+<td><code>Personenbezogen</code></td>
+<td>Schlechte Arbeitsmoral der Mitarbeiter; schlechtes Betriebsklima; hohe Mitarbeiterfluktuation</td>
+</tr>
+<tr>
+<td><code>Unternehmensbezogen</code></td>
+<td>Gerüchte im Unternehmen; zu geringe Aktivität des höheren Managements</td>
+</tr>
+<tr>
+<td><code>Werkzeuge</code></td>
+<td>Abneigung der Teammitglieder, Werkzeuge zu benutzen; Beschwerden über Softwarewerkzeuge; Forderungen nach schnelleren Computern/mehr Speicher usw.</td>
+</tr>
+<tr>
+<td><code>Anforderungen</code></td>
+<td>Viele Anfragen zur Änderung der Anforderungen; Beschwerden der Kunden</td>
+</tr>
+<tr>
+<td><code>Schätzung</code></td>
+<td>Überschreiten des vereinbarten Zeitplans; Versäumnisse, gemeldete Fehler zu beseitigen</td>
+</tr>
+</tbody>
+</table>
+<p>Abbildung 22.6: Risikoindikatoren.</p>
+<ul>
+<li>Die Risikoüberwachung ist ein wichtiger Teil des Risikomanagements.</li>
+<li>Die Risikoüberwachung überprüft regelmäßig die Wahrscheinlichkeit und die Auswirkungen der Hauptrisiken in jedem Projektstadium.</li>
+<li>Die Risikoüberwachung passt die Risikoplanung an, wenn sich die Situation ändert.</li>
+</ul>
+<hr>
+<h2 id="ukapitel-222-personalmanagement-u"><u>Kapitel 22.2 Personalmanagement </u></h2>
+<p><em>Mitarbeiter einer Softwarefirma sind deren größtes Kapital und sollten respektiert werden und
+passend zu ihren Fähigkeiten eingesetzt werden.
+ 
+Softwareprojektmanager müssen die technischen Probleme der Softwareentwicklung verstehen,
+aber auch gute Personalführungskompetenzen haben.</em></p>
+<ul>
+<li><code>Gleichheit:</code> Alle Mitarbeiter sollten gleich behandelt werden und ihren Beitrag zum Projekt wertgeschätzt werden.</li>
+<li><code>Respekt:</code> Jeder Mitarbeiter sollte seine individuellen Qualifikationen und Kompetenzen respektiert bekommen und die Möglichkeit haben, seine Ideen einzubringen.</li>
+<li><code>Integration:</code> Mitarbeiter sollten sich gehört und ernst genommen fühlen und in einem offenen und kooperativen Arbeitsumfeld arbeiten.</li>
+<li><code>Ehrlichkeit:</code> Als Manager sollten Sie immer ehrlich über die Stärken und Schwächen des Teams sprechen und auch Ihre eigenen technischen Grenzen anerkennen und Hilfe annehmen, wenn nötig.</li>
+</ul>
+<p>→ Praxisbezogenes Personalmanagement sollte auf Erfahrungen basieren</p>
+<hr>
+<h2 id="ukapitel-2221-mitarbeitermotivation-u"><u>Kapitel 22.2.1 Mitarbeitermotivation </u></h2>
+<ul>
+<li>
+<p>Ein Projektmanager muss die <code>Mitarbeiter motivieren, damit sie effektiv arbeiten.</code></p>
+</li>
+<li>
+<p><code>Motivation hängt von der Befriedigung der Bedürfnisse ab</code>, die Maslow (1954) in mehreren Ebenen angeordnet hat.</p>
+</li>
+<li>
+<p>Die <code>unteren Ebenen sind die grundlegenden Bedürfnisse</code> wie Nahrung, Schlaf, Sicherheit usw.</p>
+</li>
+<li>
+<p>Die <code>höheren Ebenen sind die sozialen Bedürfnisse</code> wie Zugehörigkeit, Anerkennung, Selbstverwirklichung usw.</p>
+</li>
+<li>
+<p>Die <code>grundlegenden Bedürfnisse haben Vorrang vor den abstrakteren Bedürfnissen.</code></p>
+<p><strong><code>Hierarchie menschlicher Bedürfnisse:</code></strong></p>
+</li>
+</ul>
+<p>↓ <code>(sozialen Bedürnisse von oben nach unten)</code> ↓</p>
+<ol>
+<li>Bedürfnis nach Selbstverwirklichung</li>
+<li>Bedürfnis nach Anerkennung</li>
+<li>Soziale Bedürfnisse</li>
+<li>Sicherheitsbedürfnisse- <code>Soziale Bedürfnisse:</code></li>
+</ol>
+<ul>
+<li>Um Mitarbeiter zu motivieren sollten Kollegen untereinander reden und sich treffen.</li>
+<li>Sozialräume im Office um Interaktionen und Teamgefühl zu steigern</li>
+<li><code>Bedürfnis nach Anerkennung:</code>
+<ul>
+<li>öffentliche Anerkennung von Erfolgen als einfacher aber wirksamer Weg</li>
+<li>passende Bezahlung</li>
+</ul>
+</li>
+<li><code>Bedürfnis der Selbstverwirklichung</code>
+<ul>
+<li>Mitarbeitern Verantwortung für ihre Arbeit übertragen und anspruchsvolle (aber erfüllbare) Aufgaben zuweisen</li>
+<li>Weiterbildung als Motivationsfaktor</li>
+</ul>
+</li>
+</ul>
+<ol start="5">
+<li>Physiologische Bedürfnisse</li>
+</ol>
+<p>↑ <code>(grundlegende Bedürfnisse von unten nach oben)</code> ↑</p>
+<p>→ Aus Sicht der Managements sind soziale Bedürfnisse und Bedürfnis der Anerkennung am wichtigsten</p>
+<ul>
+<li><code>Soziale Bedürfnisse:</code>
+<ul>
+<li>Um Mitarbeiter zu motivieren sollten Kollegen untereinander reden und sich treffen.</li>
+<li>Sozialräume im Office um Interaktionen und Teamgefühl zu steigern</li>
+</ul>
+</li>
+<li><code>Bedürfnis nach Anerkennung:</code>
+<ul>
+<li>öffentliche Anerkennung von Erfolgen als einfacher aber wirksamer Weg</li>
+<li>passende Bezahlung</li>
+</ul>
+</li>
+<li><code>Bedürfnis der Selbstverwirklichung</code>
+<ul>
+<li>Mitarbeitern Verantwortung für ihre Arbeit übertragen und anspruchsvolle (aber erfüllbare) Aufgaben zuweisen</li>
+<li>Weiterbildung als Motivationsfaktor</li>
+</ul>
+</li>
+</ul>
+<p><strong><code>Die Kernessenz des Textes ist</code></strong>, dass die Motivation der Mitarbeiter von verschiedenen Faktoren abhängt und dass die Manager darauf achten müssen, sowohl die individuellen als auch die kollektiven Bedürfnisse zu erfüllen.</p>
+<p><u><strong><code>Drei Arten von Mitarbeitern:</code></strong></u></p>
+<ul>
+<li><code>Aufgabenorientierte Mitarbeiter:</code>
+<ul>
+<li>Beziehen ihre Motivation aus ihrer Arbeit</li>
+<li>Oftmals Informatiker, die von der intellektuellen Herausforderung des Softwareentwicklung motiviert werden</li>
+</ul>
+</li>
+<li><code>Selbstorientierte Mitarbeiter:</code>
+<ul>
+<li>lassen sich prinzipiell von persönlichem Erfolg und Anerkennung motivieren</li>
+<li>an der Softwareentwicklung als ein Mittel zum Erreichen ihrer persönlichen Ziele interessiert</li>
+<li>Oft werden sie eher von langfristigeren Zielen wie angestrebten Beförderungen motiviert → Um diese Ziele umsetzen zu können, möchten sie bei der Arbeit erfolgreich sein.</li>
+</ul>
+</li>
+<li><code>Interaktionsorientierte Mitarbeiter:</code>
+<ul>
+<li>beziehen ihre Motivation aus der Anwesenheit und den Handlungen ihrer Kollegen</li>
+</ul>
+</li>
+</ul>
+<p><em>Jeder Mitarbeiter hat eine Dominante Motivationskategorie, welche sich aber im Laufe der zeit ändern kann je nach den Umständen und der Gruppendynamik</em></p>
+<hr>
+<h2 id="ukapitel-223-teamwork-u"><u>Kapitel 22.3 Teamwork </u></h2>
+<ul>
+<li>Wie Teams organisiert werden und welche Vorteile ein gutes Teamwork hat</li>
+<li>Teams sollten klein und ausgewogen sein um <em>Kommunikation und Motivation</em> zu fördern</li>
+</ul>
+<p><strong><code>Vorteile einer Gruppe:</code></strong></p>
+<ul>
+<li><code>eigener Qualitätsstandard wird entwickelt:</code>
+<ul>
+<li>intern erstellte Standards werden eher eingehalten als extern erstellte</li>
+</ul>
+</li>
+<li><code>Einzelnen lernen voneinander und unterstützen sich gegenseitig</code></li>
+<li><code>Wissen wird geteilt</code></li>
+<li><code>Umgestaltung und ständige Verbesserung wird gefordert</code>
+<ul>
+<li>Gruppenmitglieder verfolgen gemeinsam das Ziel, erstklassige Ergebnisse zu liefern und Fehler zu beheben</li>
+</ul>
+</li>
+</ul>
+<p><em>Gute Projektmanager fördern den Gruppenzusammenhalt durch die Schaffung einer Gruppenidentität, die Durchführung gemeinsamer Veranstaltungen und die Einbeziehung aller Mitglieder. Sie sorgen dafür, dass alle auf dem gleichen Informationsstand sind und schaffen so ein Klima des Vertrauens. Die Effektivität einer Gruppe hängt jedoch auch von der Art des Projekts und der Stabilität des Unternehmens ab.</em></p>
+<ul>
+<li>
+<p><code>Größter Einfluss auf Teamarbeit:</code></p>
+<ul>
+<li>Die Menschen in der Gruppe</li>
+<li>Die Organisation der Gruppe</li>
+<li>Kommunikation zwischen Management und Mitarbeitern</li>
+</ul>
+<hr>
+</li>
+</ul>
+<h2 id="ukapitel-2231-teammitglieder-ausw%C3%A4hlen-u"><u>Kapitel 22.3.1 Teammitglieder auswählen </u></h2>
+<p><em>Wie man ein geeignetes Team auswählt und wie die Persönlichkeiten und Motivationen
+der Teammitglieder die Teamleistung beeinflussen</em></p>
+<ul>
+<li>Teams sollten aus Mitarbeitern mit unterschiedlichen Fähigkeiten, Fachkenntnissen und Persönlichkeiten bestehen, um eine Vielzahl von Aufgaben zu erfüllen
+ </li>
+<li><code>Faktoren, die die Teamleistung beeinflussen:</code>
+<ul>
+<li>Qualifikationen und Fachkenntnisse : <em>sollten Qualifikationen und Fachkentnisse verfügen</em></li>
+<li>Persönlichkeiten : <em>sollten einander ergänzende Persönlichkeiten haben (selbstorientiert, aufgabenorientiert, interaktionsorientiert)</em></li>
+<li>Motivationen : <em>sollten motiviert sein Software zu verbessern und Ziele zu erreichen</em></li>
+<li>Interaktionen: <em>sollten effektiv miteinander kommunizieren und zusammenarbeiten</em></li>
+</ul>
+</li>
+</ul>
+<p>Fallstudie :</p>
+<ul>
+<li>Die Projektmanagerin Alice hat versucht, eine Gruppe aus einander ergänzenden Persönlichkeiten zusammenzustellen, wie in Abbildung 22.10 dargestellt</li>
+<li>Die Gruppe besteht aus einer guten Mischung aus interaktions- und aufgabenorientierten Mitarbeitern, aber es gibt auch einige Probleme</li>
+<li>Dorothea ist eine selbstorientierte Mitarbeiterin, die nicht zufrieden mit ihrer zugewiesenen Aufgabe ist und versucht, ihre eigenen Ziele zu verfolgen</li>
+<li>Fred ist ein Teilzeit-Domänenexperte, der hauptsächlich an den technischen Herausforderungen interessiert ist und möglicherweise die Interaktion mit anderen Gruppenmitgliedern vernachlässigt</li>
+<li>Alice muss darauf achten, dass diese Probleme nicht die Teamleistung beeinträchtigen und dass alle Gruppenmitglieder an den Projektzielen beteiligt sind</li>
+</ul>
+<hr>
+<h2 id="ukapitel-2232-organisation-der-gruppe-u"><u>Kapitel 22.3.2 Organisation der Gruppe </u></h2>
+<ul>
+<li>Projektmanager sollte nicht gleichzeitig technischer Leiter der Gruppe sein</li>
+<li>Organisation wer wichtige technische Entscheidungen treffen sollen (Systemarchitekt, Projektmnager, Teammitglieder)</li>
+<li>Interaktion mit externen beteiligten sollte über Projektmanager ggf. auch spezielle externe Anlaufpersonen passieren</li>
+<li>Organisation wie externe Mitglieder in Gruppe interagiert werden</li>
+<li>Organistion wie Informationenweitergegeben werden, vorallem ist der schutz vor Überinformation wichtig
+ </li>
+<li>Änderungen an der Software bedingen oft Änderungen an mehreren Teilen des Systems und folglich Diskussionen und Verhandlungen auf allen Ebenen der Hierarch</li>
+<li>Weil Software sich so schnell entwickelt, wissen junge Nachwuchskräfte manchmal mehr als erfahrenere Mitarbeiter. Wenn die Kommunaktion nur von oben nach unten stattfindet anstatt auf einer flachen Ebene kann es sein, dass erfahrene Mitarbeiter die Chance verpassen mit neuer Technologie zu arbeiten. Die jungen Mitarbeiter können dann genervt davon sein, veraltete Techniken zu benutzen.</li>
+</ul>
+<hr>
+<h2 id="ukapitel-2233-kommunikation-in-der-gruppe-u"><u>Kapitel 22.3.3 Kommunikation in der Gruppe </u></h2>
+<ul>
+<li>Kommunikation in der Gruppe ist essenziell für die Effektivität und Effizienz
+ </li>
+<li><code>Gruppengröße:</code>
+<ul>
+<li>Desto größer die Gruppe desto schwieriger die Kommunikation <code>(Formel für einseitige Kommunikationsverbindung ist n*(n-1) n: Gruppengröße)</code></li>
+</ul>
+</li>
+<li><code>Gruppenstruktur</code>
+<ul>
+<li>informelle Gruppen sind besser als hierarchisch strukturierte Gruppen (PS4 Lobbies better than Work Groupchats)</li>
+</ul>
+</li>
+<li><code>Zusammensetzung der Gruppe</code>
+<ul>
+<li>Gruppenmitglieder mit selben Persönlichkeitstypen streiten öfter miteinander, männlich weiblich gemischte Gruppen sind besser</li>
+</ul>
+</li>
+<li><code>Arbeitsumgebung</code>
+<ul>
+<li>Kann sich je nach Umgebung positiv oder negativ auf Kommunikation auswirken
+</span></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="zusammenfassung">ZUSAMMENFASSUNG:</h2>
+<ul>
+<li>Gutes Projektmanagement ist im Bereich Softwareentwicklung unerlässlich, wenn die Projekte
+innerhalb eines vorgegebenen Zeitplans und Budgets realisiert werden sollen.</li>
+<li>Softwaremanagement unterscheidet sich von dem Management in anderen Entwicklungsbereichen insofern als Software nicht greifbar ist. Projekte können neuartig oder innovativ sein,
+sodass es keine Erfahrungswerte gibt, auf die beim Management zurückgegriffen werden kann.
+Softwareprozesse sind noch nicht so ausgereift wie klassische Fertigungsprozesse.</li>
+<li>Risikomanagement bedeutet, die Hauptrisiken des Projekts zu ermitteln und zu bewerten, um
+ihre Eintrittswahrscheinlichkeit und ihre potenziellen Auswirkungen auf das Projekt festzulegen. Für sehr wahrscheinliche und möglicherweise ernste Risiken sollten Pläne erstellt werden,
+um sie zu vermeiden, zu bewältigen oder zu behandeln.</li>
+<li>Personalmanagement umfasst die Wahl der richtigen Mitarbeiter für ein Projekt sowie die
+Organisation des Teams und seiner Arbeitsumgebung, damit alle so produktiv wie möglich
+arbeiten können.</li>
+<li>Mitarbeiter lassen sich durch Interaktion mit anderen motivieren sowie durch Anerkennung von
+Seiten des Managements und durch die Möglichkeit der persönlichen Weiterentwicklung.</li>
+<li>Softwareentwicklungsgruppen sollten eher klein sein und sich durch ihren Zusammenhalt auszeichnen. Die Schlüsselfaktoren, die die Effektivität einer Gruppe beeinflussen, sind die Mitarbeiter der Gruppe, die Organisationsform der Gruppe und die Kommunikation zwischen den
+Gruppenmitgliedern.</li>
+<li>Die Kommunikation innerhalb einer Gruppe wird von Faktoren wie den Statusunterschieden der
+Mitglieder, der Gruppengröße, der Geschlechterzusammensetzung, den Persönlichkeiten sowie
+den verfügbaren Kommunikationskanälen beeinflusst</li>
+</ul>
+<hr>
+<h2 id="%C3%BCbungen">ÜBUNGEN</h2>
+<ol>
+<li>Beschreiben Sie, warum die Nichtgreifbarkeit von Softwaresystemen beim Management von Softwareprojekten spezielle Probleme bereitet.</li>
+<li>Beschreiben Sie, warum die besten Programmierer nicht automatisch die besten Softwaremanager sind. Es könnte hilfreich sein, für Ihre Antwort die Liste der Managementaufgaben vom Anfang dieses Kapitels (direkt vor Abschnitt 22.1) heranzuziehen.</li>
+<li>Suchen Sie in der einschlägigen Literatur nach dokumentierten Softwareprojektproblemen und erstellen Sie eine Liste der Management-Schwierigkeiten und -Fehler in diesen gescheiterten Projekten. (Ich empfehle Ihnen, mit dem Buch The Mythical Man-Month von Fred Brooks zu beginnen.)</li>
+<li>Nennen Sie sechs weitere Risiken, die zusätzlich zu denen in Abbildung 22.1 in Softwareprojekten auftreten können.</li>
+<li>Nennen Sie Gründe, warum sich die Eintrittswahrscheinlichkeit von Risiken und die Risikofolgen während der Entwicklung eines Projekts meistens ändern.</li>
+<li>Festpreisverträge, bei denen der Auftragnehmer ein festes Preisangebot für die Entwicklung eines Softwaresystems macht, können dazu dienen, das Projektrisiko vom Kunden auf den Auftragnehmer zu verlagern. Wenn bei dem Projekt etwas schiefgeht, muss der Auftragnehmer zahlen. Überlegen Sie, wie der Einsatz solcher Verträge die Wahrscheinlichkeit von Produktrisiken erhöhen kann.</li>
+<li>Erklären Sie, warum es den Zusammenhalt einer Gruppe stärken kann, wenn alle Gruppenmitglieder über den Fortschritt und die technischen Entscheidungen eines Softwareentwicklungsprojekts auf dem Laufenden gehalten werden.</li>
+<li>Welche Probleme sehen Sie für XP-Teams, bei denen viele Managemententscheidungen den Teammitgliedern überlassen bleiben?</li>
+<li>Schreiben Sie eine Fallstudie im Stil dieses Buches, um die Bedeutung der Kommunikation in einem Projektteam zu veranschaulichen. Gehen Sie davon aus, dass einige Teammitglieder nicht vor Ort arbeiten und dass es nicht möglich ist, das gesamte Team kurzfristig zusammenzurufen.</li>
+<li>Sie werden von Ihrem Manager aufgefordert, Software in einem Zeitraum abzuliefern, der, wie Sie wissen, nur eingehalten werden kann, wenn Sie von Ihrem Projektteam verlangen, unbezahlte Überstunden zu leisten. Alle Teammitglieder haben kleine Kinder. Diskutieren Sie, ob Sie die Aufforderung Ihres Managers annehmen und Ihr Team überzeugen sollten, mehr Zeit dem Unternehmen und weniger den Familien zu widmen. Welche Faktoren sind für Ihre Entscheidung ausschlaggebend?</li>
+</ol>
+<hr>
+<hr>
+<h2 id="ukapitel-233-zeitplanung-u"><u>Kapitel 23.3 Zeitplanung </u></h2>
+<p><em>Abschätzung wie lange welche Prozesse &amp; Aufgaben brauchen</em></p>
+<p><em>Eine kurze Einführung in die Zeitplanung von Softwareprojekten ist, dass es sich um einen Prozess handelt, bei dem die Projektarbeit in mehrere voneinander unabhängige Aufgaben zerlegt wird, die dann geschätzt und geplant werden. Die Zeitplanung berücksichtigt sowohl die Anforderungen des Kunden als auch die Ressourcen und Fähigkeiten des Entwicklungsteams. Die Zeitplanung kann je nach dem gewählten Softwareprozess unterschiedlich detailliert und flexibel sein. Die Zeitplanung hilft, die Abhängigkeiten und Risiken der Aufgaben zu identifizieren und zu verwalten, um Verzögerungen und Änderungen zu vermeiden oder zu bewältigen. Die Zeitplanung kann auch grafisch dargestellt werden, um den Überblick und die Kommunikation über den Projektfortschritt zu erleichtern.</em></p>
+<hr>
+<h2 id="ukapitel-2331-darstellung-des-zeitplans-u"><u>Kapitel 23.3.1 Darstellung des Zeitplans </u></h2>
+<ul>
+<li><code>Kalenderbasierte Balkendiagramme</code>
+<ul>
+<li>Zeigen wer für welche Aktivität verantwortlich ist</li>
+<li>die erwartete Laufzeit sowie Anfangs- und Endzeitpunkt der Aktivität</li>
+<li>werden manchmal auch <code>Gantt-Diagramm</code> genannt</li>
+</ul>
+</li>
+<li><code>Ablaufdiagramme</code>
+<ul>
+<li>Zeigen Abhängigkeit zwischen den verschieden Aktivitäten, aus denen das Projekt besteht</li>
+</ul>
+</li>
+</ul>
+<p>Jede Aktivität besteht aus folgenden Angaben:</p>
+<ul>
+<li>eine Dauer in Kalendertagen oder -monaten</li>
+<li>einem Schätzwert für den Aufwand in Personentagen oder Personenmonaten zur
+Fertigstellung der Arbeit</li>
+<li>einem Abgabetermin, an dem die Aktivität erledigt sein sollte</li>
+<li>einem definierten Endpunkt. Es kann sich dabei um ein Dokument, ein Review-Meeting, die erfolgreiche Ausführung aller Tests usw. handeln</li>
+</ul>
+<p>→ Zudem sollten auch Meilensteine gesetzt werden, welche als kuzrer Bericht dokumentiert werden</p>
+<ul>
+<li>Projektmanager erstellen Zeitplan und verteilen Ressourcen (vor allem Softwareentwickler) auf die Aufgaben</li>
+<li>Ressourcenzuweisungen werden in Projektverwaltungswerkzeugen eingegeben, die Balkendiagramme erstellen</li>
+<li>Teilzeitzuweisungen, Spezialisten und Verzögerungen können zu Terminproblemen führen</li>
+<li>Projektmanagementtools verwenden Tabellen und Datenbanken, um Balken- und Ablaufdiagramme zu erzeugen</li>
+</ul>
+<hr>
+<h2 id="u-234-agile-planung-u"><u> 23.4 Agile Planung </u></h2>
+<ul>
+<li>Agile Methoden sind iterative Ansätze, die Software in Inkrementen entwickeln und ausliefern (<code>Step by Step</code>)</li>
+<li>Die Funktionalität der Inkremente wird während der Entwicklung beschlossen, um auf Änderungen der Anforderungen und Prioritäten des Kunden zu reagieren</li>
+<li>Agile Methoden wie Scrum und Extreme Programming haben einen zweistufigen Planungsansatz: Anfangsphase und Entwicklungsplanung</li>
+<li>am meisten benutzen agile Ansätze sind Scrum und Extreme Programming</li>
+</ul>
+<p>Entwicklungsplanung:</p>
+<ul>
+<li><code>Releaseplanung:</code> die auf Monate vorausschaut und entscheidet, welche Merkmale Teil eines Systemrelease sein sollten</li>
+<li><code>Iterationsplanung:</code> betrachtet einen kürzeren Zeitabschnitt und konzentriert sich
+auf die Planung des nächsten Inkrements eines Systems. Diese umfasst normalerweise zwei bis vier Wochen Teamarbeit.</li>
+</ul>
+<p><em>Das Planungsspiel ist eine Methode der agilen Softwareentwicklung, die auf User-Storys basiert. User-Storys sind kurze Beschreibungen der gewünschten Funktionen des Systems, die vom Entwicklungsteam und dem Kunden gemeinsam erarbeitet werden. Das Ziel des Planungsspiels ist es, den Zeit- und Ressourcenaufwand für die Umsetzung der User-Storys zu schätzen und einen Release- und Iterationsplan zu erstellen.</em></p>
+<ul>
+<li>User-Storys werden nach Aufwand sortiert und mit Punkten bewertet.</li>
+<li>Geschwindigkeit des Teams wird geschätzt und in Personentage umgerechnet.</li>
+<li>Releaseplanung wählt und priorisiert Storys für ein Release mit Kundenbeteiligung.</li>
+<li>Iterationsplanung wählt und implementiert Storys für eine Iteration mit Geschwindigkeitsanpassung.</li>
+<li>Aufgabenplanung zerlegt Storys in Entwicklungsaufgaben und verteilt sie an Entwickler.</li>
+</ul>
+<p><code>Techniken der Aufwandsabschätzung:</code></p>
+<ul>
+<li><code>Erfahrungsbasierte Techniken:</code> Die Schätzung der zukünftigen Aufwandsanforderungen basiert auf den Erfahrungendes Managers, die er im Fachbereich und in vorherigen Projekten gesammelt hat</li>
+<li><code>Aufwandsschätzung mithilfe eines Algorithmus:</code> Abschätzung wird mithilfe von mathematischen Formeln und Projektattribute (wie Größe) und Prozessmerkmale (wie die Erfahrung der
+Mitarbeiter) berechnet</li>
+</ul>
+<p>→ bei beiden fällen entscheiden ob Aufwand direkt schätzen oder lieber die Projekt und Produktmerkmale
+→ In der Anfangsphase eines Projekts weisen diese Schätzungen eine erhebliche Fehlermarge auf</p>
+
+</body>
+</html>
